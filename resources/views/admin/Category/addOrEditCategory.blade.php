@@ -4,7 +4,7 @@
 
 <!-- breadcrumb  -->
 <div class="d-flex justify-content-between mb-3">
-    <x-breadcrumb page="Category | Edit"></x-breadcrumb>
+    <x-breadcrumb page="Category | {{  isset($category) ? 'Edit' : 'Add'  }}"></x-breadcrumb>
 </div>
 
 <div class="card">

@@ -166,7 +166,7 @@ function applyTextWatermark($sourcePath, $savePath, $text = "Watermark", $opacit
     $sourceHeight = imagesy($sourceImage);
 
     // Set font properties
-    $fontSize = 80; // Adjust font size as needed
+    $fontSize = 25; // Adjust font size as needed
     $angle = 0; // Angle of text
     $fontFile = public_path("admin/font/Sigmar-Regular.ttf"); // Path to TTF font (ensure this file exists)
     

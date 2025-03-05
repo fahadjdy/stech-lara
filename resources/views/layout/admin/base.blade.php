@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title')</title>
+    <title>{{ $title ?? 'Admin'}} </title>
+
+    <meta name="robots" content="noindex, nofollow">
     <link href="https://getbootstrap.com/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" >
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
-    <link rel="icon" href="{{ asset('author/fhd-favicon.png') }}" type="image/png">
+    <link rel="icon" href="{{ asset(session()->get('admin_data')['favicon']) }}" type="image/png">
     <link rel="stylesheet" href="{{ asset('admin/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('admin/css/responsive.css') }}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -17,6 +19,7 @@
     @yield('head')
 </head>
 <body>
+
     @include('layout.admin.header')
     
     <div class="container-fluid">

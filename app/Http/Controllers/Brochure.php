@@ -37,8 +37,9 @@ class Brochure extends Controller
 
     public function getFooterContent()
     {
+
         return $footer =  [
-            'admin' => 'Fahad'
+            'admin' => (session()->get('admin_data')['name']) ?? '-'
         ];   
     }
 

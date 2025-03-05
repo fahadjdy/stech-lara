@@ -85,12 +85,14 @@ class Admin extends Controller
 
     public function dashboard()
     {
-        return view('admin.dashboard');
+        $title = 'Admin | Dashboard';
+        return view('admin.dashboard',compact('title'));
     }
     public function profile()
     {
+        $title = 'Admin | Profile';
         $profile = AdminModel::find(session()->get('admin_id'));
-        return view('admin.profile',compact('profile'));
+        return view('admin.profile',compact('profile','title'));
     }
     public function saveImage(Request $request, $type)
     {
@@ -112,7 +114,7 @@ class Admin extends Controller
     
         if ($request->hasFile($type)) {
             $file = $request->file($type);
-            $filename = $type . '_' . time() . '_' . uniqid() . '.' . $file->getClientOriginalExtension();
+            $filename = $type . '.' . $file->getClientOriginalExtension();
             $destinationPath = public_path('admin/img/profile');
     
             if (!file_exists($destinationPath)) {

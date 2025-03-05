@@ -16,7 +16,8 @@ class Category extends Controller
 
     public function index()
     {
-        return view('admin.Category.category');
+        $title = 'Admin | Category';
+        return view('admin.Category.category',compact('title'));
     }
 
     public function brochure($id = null)
@@ -43,12 +44,14 @@ class Category extends Controller
         
         $category = null; // Default to null for add
         
+        $title = 'Admin | Add Category';
         // If ID is provided, fetch category details for editing
         if ($id) {
+            $title = 'Admin | Edit Category';
             $category = CategoryModel::findOrFail($id);
         }
         
-        return view('admin.Category.addOrEditCategory', compact('categories', 'category'));
+        return view('admin.Category.addOrEditCategory', compact('categories', 'category','title'));
     }
 
 

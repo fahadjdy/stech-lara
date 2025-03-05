@@ -8,6 +8,6 @@
         <span><?= $header['contact_1'] ?? '#CONTACT' ?>  | <?= $header['email_1']  ?? '#EMAIL' ?></span>
     </div>
     <div>
-        <img src="{{ asset($header['logo']) }}" alt="<?= $header['name'] ?>" height="150px">
+        <img src="{{ asset($header['logo']) }}" alt="<?= $header['name'] ?>" width="100px" class="mx-2">
     </div>
 </div>

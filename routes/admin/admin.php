@@ -51,14 +51,6 @@ Route::group(['prefix' => 'admin', 'middleware' => [AdminAuth::class]], function
     Route::get('/category/brochure/{id}', [Category::class, 'brochure'])->name('category.brochure');
     Route::get('/category/brochure', [Category::class, 'brochure']);
 
-
-    // Testimonial 
-    Route::get('/testimonial', [Testimonial::class, 'index']);
-
-
-    // Slider 
-    Route::get('/slider', [Slider::class, 'index']);
-
     Route::post('profile/update', [Admin::class, 'update'])->name('admin.profile.update');    
     Route::post('profile/change-password', [Admin::class, 'changePassword'])->name('admin.profile.change_password');
 

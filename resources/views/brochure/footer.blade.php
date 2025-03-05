@@ -2,7 +2,7 @@
         <table>
             <tr>
                 <td>
-                    <p>Admin: {{ $footer['admin'] }}</p>
+                    <p>Powered By : <b> {{ $footer['admin'] }} </b></p>
                 </td>
             </tr>
         </table>

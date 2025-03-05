@@ -44,7 +44,7 @@ class AdminModel extends Model
         $admin = self::where('username', $credentials['username'])->first();
 
         if ($admin && Hash::check($credentials['password'], $admin->password)) {
-            session(['admin_id' => $admin->id, 'admin_username' => $admin->username , "is_admin" => true]);
+            session(['admin_id' => $admin->id, 'admin_username' => $admin->username , "admin_data" => $admin]);
             return true;
         }
 

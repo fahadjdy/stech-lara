@@ -31,7 +31,7 @@ $(document).ready(function () {
                 return data ? '<span class="badge bg-success">Active</span>' : '<span class="badge bg-danger">Inactive</span>';
             }},
             { data: 'image', render: function(data) {
-                return data ? `<img data-src="${location.origin}/${data}" width="50" height="50" class="lazy">` : 'N/A';
+                return data ? `<img src="${location.origin}/${data}" width="50" height="50" class="lazy">` : 'N/A';
             }, orderable: false },
             { data: 'actions', orderable: false, searchable: false }
         ],
