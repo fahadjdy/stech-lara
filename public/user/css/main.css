@@ -1423,46 +1423,6 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Call To Action 2 Section
---------------------------------------------------------------*/
-.call-to-action-2 {
-  padding: 80px 0;
-}
-
-.call-to-action-2 .container {
-  position: relative;
-  z-index: 3;
-}
-
-.call-to-action-2 h3 {
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--default-color);
-}
-
-.call-to-action-2 p {
-  color: var(--default-color);
-}
-
-.call-to-action-2 .cta-btn {
-  font-family: var(--heading-font);
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 12px 40px;
-  border-radius: 50px;
-  transition: 0.5s;
-  margin: 10px;
-  border: 2px solid color-mix(in srgb, var(--contrast-color), transparent 30%);
-  color: var(--contrast-color);
-}
-
-.call-to-action-2 .cta-btn:hover {
-  border-color: var(--contrast-color);
-}
-
-/*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
 .contact .info-box {

@@ -8,8 +8,7 @@
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="{{ asset('user/img/favicon.png') }}" rel="icon">
-  <link href="{{ asset('user/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+  <link href="{{ asset($profile['favicon']) }}" rel="icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
